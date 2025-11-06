@@ -11,7 +11,7 @@ import retrofit2.create
 import javax.inject.Singleton
 
 object ApiModule {
-    private const val BASE_URL = ""
+    private const val BASE_URL = "https://gestionhuacalesapi.azurewebsites.net/"
 
     @Provides
     @Singleton
