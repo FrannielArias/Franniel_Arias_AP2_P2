@@ -16,12 +16,12 @@ interface GastosApi {
     @GET("api/Gastos/{id}")
     suspend fun getGasto(@Path("id")id: Int): List<GastosDto>
 
-    @PUT("api/Gastos/{id}")
-    suspend fun updateGastos(@Body gastosDto: GastosDto): Response<Unit>
-
     @POST("api/Gastos")
-    suspend fun saveGastos(@Body gastosDto: GastosDto): Response<Unit>
+    suspend fun saveGastos(@Body gastosDto: GastosDto)
+
+    @PUT("api/Gastos/{id}")
+    suspend fun updateGastos(@Body gastosDto: GastosDto)
 
     @DELETE("api/Gastos/{id}")
-    suspend fun deleteGastos(@Path("id") id: Int): Response<Unit>
+    suspend fun deleteGastos(@Path("id") id: Int)
 }
