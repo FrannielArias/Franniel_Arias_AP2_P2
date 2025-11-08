@@ -9,19 +9,19 @@ data class GastosMappers(
 )
 
 fun GastosDto.toDomain() = Gastos(
-    gastosId = this.GastosId ?: 0,
-    fecha = this.Fecha,
-    suplidor = this.suplidor,
-    ncf = this.Nfc,
-    itbis = this.Itbis ?: 0,
-    monto = this.Monto ?: 0
+    gastosId = gastosId,
+    fecha = fecha,
+    suplidor = suplidor,
+    ncf = ncf,
+    itbis = itbis,
+    monto = monto
 )
 
 fun Gastos.toDto() = GastosDto(
-    GastosId = gastosId,
-    Fecha = fecha,
+    gastosId = gastosId,
+    fecha = fecha,
     suplidor = suplidor,
-    Nfc = ncf,
-    Itbis = itbis,
-    Monto = monto
+    ncf = ncf,
+    itbis = itbis,
+    monto = monto
 )
