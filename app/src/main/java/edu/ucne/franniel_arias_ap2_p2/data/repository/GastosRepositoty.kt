@@ -17,7 +17,7 @@ class GastosRepositoty @Inject constructor(
     fun getGastos(gastosId: Int): Flow<Resource<List<GastosDto>>> = flow{
         try{
             emit(Resource.Loading())
-            val gasto = remoteDataSource.getGastos(gastosId)
+            val gasto = remoteDataSource.getGasto(gastosId)
             emit(Resource.Success(gasto))
         }catch (e: HttpException){
             emit(Resource.Error("Error de internet: ${e.message}"))
