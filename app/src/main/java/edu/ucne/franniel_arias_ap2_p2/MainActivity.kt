@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import dagger.hilt.android.AndroidEntryPoint
+import edu.ucne.franniel_arias_ap2_p2.presentacion.GastosScreen
 import edu.ucne.franniel_arias_ap2_p2.ui.theme.Franniel_Arias_AP2_P2Theme
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -21,8 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Franniel_Arias_AP2_P2Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    GastosScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
